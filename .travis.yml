@@ -13,7 +13,7 @@ install:
 script:
 - make html
 
-notifications
+notifications:
   email: false
 
 after_success: bash deploy.sh
