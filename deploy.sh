@@ -3,6 +3,8 @@ BRANCH=master
 TARGET_REPO=mepa/mepa.github.io.git
 PELICAN_OUTPUT_FOLDER=output
 
+echo -e "Testing...\n"
+
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo -e "Starting to deploy to Github Pages\n"
     if [ "$TRAVIS" == "true" ]; then
