@@ -1,7 +1,7 @@
 branches:
   only:
   - master
-
+  
 language: python
 
 python:
@@ -15,5 +15,10 @@ script:
 
 notifications:
   email: false
-
+  
+env:
+  global:
+    - secure: ca14zUktnLzYGLqdLcNkqrVYYGhpHIvxDuOTbLuO/uTPTMdQlvpqk7BPI6xg3Amz7Owa6xaF+gue0ZVUexKpnZTMAnfp/NFd4ooFvQyCuNZMXc9D/i93Gd4FAX4TY6d84odXfh5v1tyqZyUUqVNFcwo+vaEjAWhI4U4lcKb5I5LkNUQkHeVMfHgaInuPOh1mHyDy7bpE9L8eHXhiINaXAvPFRFHo/0dxwAbTjerFHIey6flebuDXQBh9NsjeikTBuE0xbZRXXcjAUxRvN+O6MmZCNv5+LNtVnmKHRwblbfF27gI0Tj/mW40BwhHRvyOHf/qlGUXlxXPg9s/iS22T8yU9/3K3bIfxzjs7vJiKXkUNdk6CGVA3+CqPDj7MqKjqmhh8I0ttx+2gh7xczqvmT2vbI4xZ/B48enXWYy8cIetH6CovrQ37lT4Kc1rABEXUObSM9zZ/Tez5rVAlvWMBwEevVK5h4/3/jDnzcdO68PbixOHXXz4/Ynce/LMPMj9SlJX3gNfmSj648XEXy9/qCacNaDi4qt52I33fuZMIRMWd1Jim73rE3XqfWXjXC5gyMCsj5JM360E2qTShLA+uAaPXkfWqzIPOwk+QexbLdXmc6KEPnB36aBk1iKwXP0kC9FLvA99vBo7zdfXFbdrnnFnQjcR9V5PORiiAniOh7GQ=
+    - git submodule update --init --recursive
+    
 after_success: bash deploy.sh
