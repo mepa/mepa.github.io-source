@@ -6,3 +6,6 @@ Tags: jupyter, pelican, github
 Author: Meghann Agarwal
 Summary: Testing a Jupyter notebook with Pelican
 
+This is a test of the pelican plugin for displaying a Jupyter notebook on this blog.
+
+{% notebook JupyterTest.ipynb %}
