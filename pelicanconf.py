@@ -34,9 +34,16 @@ DEFAULT_PAGINATION = 5
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-#THEME = './themes/pelican-bootstrap3'
+THEME = './themes/pelican-bootstrap3'
 
-MARKUP = ('md', 'ipynb')
+#MARKUP = ('md', 'ipynb')
 
-PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup']
+#PLUGIN_PATHS = ['./plugins']
+#PLUGINS = ['ipynb']
+
+PLUGIN_PATHS = ['./pelican-plugins']
+PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
+           'liquid_tags.youtube', 'liquid_tags.vimeo',
+           'liquid_tags.include_code', 'liquid_tags.notebook']
+
+NOTEBOOK_DIR ='notebooks'
