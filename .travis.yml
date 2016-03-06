@@ -1,24 +1,17 @@
 branches:
   only:
   - master
-  
 language: python
-
 python:
 - 2.7
-
 install:
 - pip install -r requirements.txt --use-mirrors
-
 script:
 - make html
-
 notifications:
   email: false
-  
 env:
   global:
-    - secure: ca14zUktnLzYGLqdLcNkqrVYYGhpHIvxDuOTbLuO/uTPTMdQlvpqk7BPI6xg3Amz7Owa6xaF+gue0ZVUexKpnZTMAnfp/NFd4ooFvQyCuNZMXc9D/i93Gd4FAX4TY6d84odXfh5v1tyqZyUUqVNFcwo+vaEjAWhI4U4lcKb5I5LkNUQkHeVMfHgaInuPOh1mHyDy7bpE9L8eHXhiINaXAvPFRFHo/0dxwAbTjerFHIey6flebuDXQBh9NsjeikTBuE0xbZRXXcjAUxRvN+O6MmZCNv5+LNtVnmKHRwblbfF27gI0Tj/mW40BwhHRvyOHf/qlGUXlxXPg9s/iS22T8yU9/3K3bIfxzjs7vJiKXkUNdk6CGVA3+CqPDj7MqKjqmhh8I0ttx+2gh7xczqvmT2vbI4xZ/B48enXWYy8cIetH6CovrQ37lT4Kc1rABEXUObSM9zZ/Tez5rVAlvWMBwEevVK5h4/3/jDnzcdO68PbixOHXXz4/Ynce/LMPMj9SlJX3gNfmSj648XEXy9/qCacNaDi4qt52I33fuZMIRMWd1Jim73rE3XqfWXjXC5gyMCsj5JM360E2qTShLA+uAaPXkfWqzIPOwk+QexbLdXmc6KEPnB36aBk1iKwXP0kC9FLvA99vBo7zdfXFbdrnnFnQjcR9V5PORiiAniOh7GQ=
-    - git submodule update --init --recursive
-    
+  - secure: b3hKKSjpVP95+bUVZ0DrGIYC/z4HlEq8aNsEV2y4jzuP5k1pE0nzEgJaJ9Ym+W6p1VBJwYYEUbLwAccILaDIvimqWkmqvkyqq15DXcPwPU0evLoouucUuT5IJKczU7zNzi42pWS/Bg7UqoYQZj6QD+jbOf4GAMVdcpqdVw9bVAbUf3R24FbRVHyRZaKO7ytbgcSR9sGHxvYo00Po9aTXRPJkGV6uvXiGvn/gvvUgM+xD3sPD4reWwnLRb+H0m35euWtSOrWIiUxptj4L8nOZqV3gPlYvgJ5Mr0W28iVs+7ft47vARLxJlaUYt+VscCKtEmnpXtgEjrQPpSILvv5X8WW8l9/lEEwiywebfAoEqmIbhNSwSt1anayVpQxyQQBac3ZhxfJ/umDBacDyHHx6tadq1Q1C84Rd0j3huINk+rBcNVwQKhbDxeeelvgtdYYVzw4ic0wF3VJwZvkVqy/ffeGnxrlhNPZMg+7t4PVPubqOSC6RbF+JOWt3HWLyyT+s83SxzTt1iDi79xikL/hPWkJP2q4iWtF8Au9Hs1usHzv1Aqz7lk5kq9eHqGTrDi725Fo3CiTIYbhQuUKTcsppRhHvgiY8Ft6t9Uz/Dyp6ptqZBtV5hmKFeG4cvSJgYWtPD/tzPKqWybmMCkM/DEnS3QcNFo3UrDGnKS6ZeM/wBOg=
+  - git submodule update --init --recursive
 after_success: bash deploy.sh
