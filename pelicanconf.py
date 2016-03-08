@@ -35,7 +35,7 @@ DEFAULT_PAGINATION = 5
 #RELATIVE_URLS = True
 
 #THEME = './themes/pelican-bootstrap3'
-THEME = './themes/pelican-elegant''
+THEME = './themes/pelican-elegant'
 
 #MARKUP = ('md', 'ipynb')
 
